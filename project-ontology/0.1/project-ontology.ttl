@@ -12,9 +12,18 @@
   dct:contributor "admin";
   dct:created "2026-03-11T12:48:39.384Z"^^xsd:dateTime;
   dct:creator "admin";
-  dct:modified "2026-03-11T12:48:39.384Z"^^xsd:dateTime;
+  dct:modified "2026-03-11T12:48:57.368Z"^^xsd:dateTime;
   dct:title "Project Ontology"@en;
   <http://purl.org/ontology/bibo/status> <http://purl.org/spar/pso/draft>;
   vaem:namespace "http://ontologies.metaphacts.com/project-ontology/"^^xsd:anyURI;
   rdfs:label "Project Ontology"@en;
   owl:versionInfo "0.1" .
+
+:Class a owl:Class;
+  <http://open-services.net/ns/core#modifiedBy> "admin";
+  dct:contributor "admin";
+  dct:created "2026-03-11T12:48:57.368Z"^^xsd:dateTime;
+  dct:creator "admin";
+  dct:modified "2026-03-11T12:48:57.368Z"^^xsd:dateTime;
+  rdfs:isDefinedBy :0.1;
+  rdfs:label "class"@en .
