@@ -1,0 +1,472 @@
+@prefix idr-SSOT_Conceptual_Data_Model: <https://astrazeneca.net/onto/idera/Enterprise/SSOT_Conceptual_Data_Model#> .
+@prefix idr: <https://astrazeneca.net/onto/idera/properties#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://astrazeneca.net/onto/idera/Enterprise/SSOT_Conceptual_Data_Model> a owl:Ontology ;
+    rdfs:label "SSOT Conceptual Data Model"@en ;
+    dcterms:title "SSOT Conceptual Data Model"@en ;
+    dcterms:description "SSOT Conceptual Data Model"@en ;
+    owl:versionInfo "0.1" ;
+    dcterms:contributor "DMaaS" ;
+    dcterms:modified "03/18/2025" .
+
+idr-SSOT_Conceptual_Data_Model:ClinicalStudy a owl:Class ;
+    rdfs:label "Clinical Study"@en ;
+    skos:definition "A formal investigation to assess the utility, impact, pharmacological, physiological, and/or psychological effects of a particular treatment, procedure, drug, device, biologic, or Subject characteristic. NOTE: The notion of a Study includes (but is not limited to) the design, statistical considerations and activities to test a particular hypothesis or answer a particular question that is the basis of the study. The study may be of any type that involves subjects, including prevention, therapeutic, interventional or observational. Subjects may be biological entities (human, specimen, tissue, organ, etc.) or Products. The complete notion of the study is represented by the Study entity and all its associations which make explicit the details identified in the Study Protocol. Research conducted with Human Subjects or on Material of human origin in which an Investigator directly interacts with human subjects includes development of new technologies, Study of mechanisms of human diseases, therapy, clinical trials, epidemiologic, behavior, and health services research."@en ;
+    rdfs:comment "http://purl.obolibrary.org/obo/NCIT_C15206"@en ;
+    idr:entityType "Candidate Master" ;
+    idr:entityType "Primary" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:DelayType a owl:Class ;
+    rdfs:label "Delay Type"@en ;
+    skos:definition "A list of alternative reference types used to identify a clinical study delay type e.g. local reference or regulatory reference (Cancelled, Hold, Terminated etc.,)"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyCountryStatusType a owl:Class ;
+    rdfs:label "Study Country Status Type"@en ;
+    skos:definition "A status that may be associated with a Study Country."@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyEligibility a owl:Class ;
+    rdfs:label "Study Eligibility"@en ;
+    skos:definition "A set of criteria that may be used in order to include or exclude subjects from a Study. This could include age, medical history, gender etc.."@en ;
+    idr:entityType "Transactional" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyCountryMonitoringType a owl:Class ;
+    rdfs:label "Study Country Monitoring Type"@en ;
+    skos:definition "A study country parameter that describes the approach to monitoring in the country. Valid values include: Code Name CRO-IN Inventive Monitored CRO CRO Monitored ATLSUM Synch with Atlas summary data AZ AZ Monitored CRO-CO Covance Monitored RPS RPS Monitored ARO ARO Monitored AZ-CRO AZ and CRO Monitored NS Not synchronized"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyCountryCharacteristicType a owl:Class ;
+    rdfs:label "Study Country Characteristic Type"@en ;
+    skos:definition "Holds the names used by the generic 'STUDY COUNTRY CHARACTERISTIC' name-value representation of study country characteristics."@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:IrbIecApprovalLevel a owl:Class ;
+    rdfs:label "Irb Iec Approval Level"@en ;
+    skos:definition "IRB/IEC Approval Levels. Includes 'Local' and 'Central'. The International Council on Harmonisation (ICH) defines an institutional review board (IRB) as a group formally designated to protect the rights, safety and well-being of humans involved in a clinical trial by reviewing all aspects of the trial and approving its startup. IRBs can also be called independent ethics committees (IECs)."@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:MilestoneType a owl:Class ;
+    rdfs:label "Milestone Type"@en ;
+    skos:definition "A type of Milestone that represents a significant planned event within the lifecycle of a Project, Study, or other planned activity."@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:Consent a owl:Class ;
+    rdfs:label "Consent"@en ;
+    skos:definition "Consent by a patient to a surgical or medical procedure, participation in a Clinical Study (after achieving an understanding of the relevant medical facts and the risks involved) and consent to use their Samples and data that is collected, which can later be withdrawn."@en ;
+    rdfs:comment "http://purl.obolibrary.org/obo/NCIT_C16735"@en ;
+    idr:entityType "Transactional" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudySite a owl:Class ;
+    rdfs:label "Study Site"@en ;
+    skos:definition "A facility in which study/protocol activities are conducted. A Healthcare Organisation executing a Study at a particular location. For example, the Site where the study Subject encounter occurs, or the site of the Investigator."@en ;
+    rdfs:comment "BRIDG: Study Site http://purl.obolibrary.org/obo/NCIT_C80403"@en ;
+    idr:entityType "Candidate Master" ;
+    idr:entityType "Primary" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyCountry a owl:Class ;
+    rdfs:label "Study Country"@en ;
+    skos:definition "A Country in which one or more Study Sites will be established to conduct a Clinical Study. Inferred from (ID: NCIT_C98770): The Country within which the investigation, trial or Study is taking place or is planned to."@en ;
+    rdfs:comment "http://purl.obolibrary.org/obo/NCIT_C98770"@en ;
+    idr:entityType "Candidate Master" ;
+    idr:entityType "Primary" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:Party a owl:Class ;
+    rdfs:label "Party"@en ;
+    skos:definition "A party is an individual, organization, legal entity, social organization or business unit of interest to the business.  Party is a concept that enables individuals, organizations, legal entities, social organization and business units to be related or defined with the context of roles, events and relationships."@en ;
+    rdfs:comment "ADRM: PARTY An informal term specifying an organization or Person. http://purl.obolibrary.org/obo/NCIT_C41107"@en ;
+    idr:entityType "Candidate Master" ;
+    idr:entityType "Primary" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:Milestone a owl:Class ;
+    rdfs:label "Milestone"@en ;
+    skos:definition "A significant date in the life of a Project, Study, Study Country or Study Site."@en ;
+    idr:entityType "Transactional" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:Person a owl:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:subClassOf idr-SSOT_Conceptual_Data_Model:Party ;
+    skos:definition "A named individual involved in the activities of AZ. The information held also includes that person's qualifications. Examples include: employees, business contacts, participants in studies, external experts. Note: the specific roles and expertise that a Person holds (regardless of their relationship with AZ) and the specific role they undertake in relation to activities with AZ, are held elsewhere on the model."@en ;
+    rdfs:comment "ADRM: Not Present"@en ;
+    idr:entityType "Candidate Master" ;
+    idr:entityType "Primary" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:MilestoneDateType a owl:Class ;
+    rdfs:label "Milestone Date Type"@en ;
+    skos:definition "A type of Milestone date, such as 'Planned', 'Actual', 'Baseline'. etc"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:MilestoneStatusType a owl:Class ;
+    rdfs:label "Milestone Status Type"@en ;
+    skos:definition "A valid state for a study e.g. Planned, Reported."@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:Country a owl:Class ;
+    rdfs:label "Country"@en ;
+    skos:definition "The Country definition is based upon ISO 3166 Country Codes: Each country or territory has three codes: - a two letter code - a three letter code - a three digit code"@en ;
+    rdfs:comment "ADRM: COUNTRY (ISO 3166)"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:MilestoneCommentType a owl:Class ;
+    rdfs:label "Milestone Comment Type"@en ;
+    skos:definition "eg. - IRB/IEC Issue - Site Personnel Issue - Study leader data sign off - Recruitment Issue etc"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyParty a owl:Class ;
+    rdfs:label "Study Party"@en ;
+    skos:definition "A role played in the execution of a Study, at the study, Study Country or Study Site level."@en ;
+    idr:entityType "Candidate Master" ;
+    idr:entityType "Primary" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:PartyContactDetail a owl:Class ;
+    rdfs:label "Party Contact Detail"@en ;
+    skos:definition "The details required for correspondence and communication with, or delivery to, a Party. This will include telephone numbers, email addresses, postal addresses and any preferences."@en ;
+    rdfs:comment "ADRM: Not Present"@en ;
+    idr:entityType "Candidate Master" ;
+    idr:entityType "Primary" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:OrganisationUnit a owl:Class ;
+    rdfs:label "Organisation Unit"@en ;
+    rdfs:subClassOf idr-SSOT_Conceptual_Data_Model:Party ;
+    skos:definition "A business organization such as a business unit, department etc. that has responsibility for a Budget, employees or similar business functions."@en ;
+    rdfs:comment "ADRM: ORGANIZATION"@en ;
+    idr:entityType "Primary" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:PostalAddress a owl:Class ;
+    rdfs:label "Postal Address"@en ;
+    skos:definition "A physical location used by a person or organization for the purpose of receiving postal mail deliveries. A unique geographical point used by a party for correspondence, contact, business activities and delivery purposes."@en ;
+    rdfs:comment "http://purl.obolibrary.org/obo/NCIT_C70946"@en ;
+    idr:entityType "Candidate Master" ;
+    idr:entityType "Primary" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudySubjectStatus a owl:Class ;
+    rdfs:label "Study Subject Status"@en ;
+    skos:definition "The valid state transitions for a study subject Examples include Withdrawn, Complete"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:Sex a owl:Class ;
+    rdfs:label "Sex"@en ;
+    skos:definition "A type of classification that indicates the sex of people who may participate in a clinical study (all, female, male). Sex is a person's classification as female or male based on biological distinctions. Sex is distinct from gender-based classification."@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudySubjectDiscontinuationReason a owl:Class ;
+    rdfs:label "Study Subject Discontinuation Reason"@en ;
+    skos:definition "The reason a subject has failed to complete the study. Note this is often not a voluntary withdrawal. Examples include: Adverse Event death Pregnancy Physician Decision Protocol Deviation ----------- ADRM definition The reason for the subject's discontinuation in the clinical trail. (note: This could be captured via ...STATUS or ..EVENT, but it is important enough to pull out explicitly.) Ex.: - Voluntary Withdrawal - Patient no longer meets requirements of clinical trial - Patient violated terms of clinical trail - Clinical Trial is terminated"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:Ethnicity a owl:Class ;
+    rdfs:label "Ethnicity"@en ;
+    skos:definition "Ethnicity involves how one sees oneself and how one is seen by others as part of a group on the basis of presumed ancestry and sharing a common destiny."@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:HumanSubject a owl:Class ;
+    rdfs:label "Human Subject"@en ;
+    skos:definition "A living individual about whom an Investigator conducting research obtains data through intervention or interaction with the individual or through identifiable private information. [def-source: NCI]"@en ;
+    idr:entityType "Candidate Master" ;
+    idr:entityType "Primary" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:Race a owl:Class ;
+    rdfs:label "Race"@en ;
+    skos:definition "A single classification of the Race the subject is within. e.g. Asian, Black etc.,"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:PersonalAttribute a owl:Class ;
+    rdfs:label "Personal Attribute"@en ;
+    skos:definition "The distinguishing qualities or prominent aspects of an individual Person. [def-source: NCI]"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:RagStatusType a owl:Class ;
+    rdfs:label "Rag Status Type"@en ;
+    skos:definition "A red, amber, green traffic light system to indicate the progress of �a clinical trial submission. �A green light indicates that the submission is on track. An amber light indicates that the submission deadline date is approaching and a red light indicates that the submission deadline has passed and that the submission is overdue"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:Communication a owl:Class ;
+    rdfs:label "Communication"@en ;
+    skos:definition "The record of a documented interaction between parties for the purposes of communication. This includes documents, correspondence and associated templates."@en ;
+    rdfs:comment "ADRM: DOCUMENT"@en ;
+    idr:entityType "Transactional" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:ProductMedicalCondition a owl:Class ;
+    rdfs:label "Product Medical Condition"@en ;
+    skos:definition "A list of Indications, contra indications or side effects associated with a Product. This forms part of the Summary of Product Characteristics."@en ;
+    idr:entityType "Candidate Master" ;
+    idr:entityType "Primary" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyStatusType a owl:Class ;
+    rdfs:label "Study Status Type"@en ;
+    skos:definition "The types of business processes associated with a �clinical study in relation to its approval status, authorization for patient enrolment, and protocol-specific activities."@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:ClinicalStudyProtocol a owl:Class ;
+    rdfs:label "Clinical Study Protocol"@en ;
+    skos:definition "A formal document that describes a complete plan of research activity in the framework of a Clinical Study; specifically, the Study objective(s), design, methodology, eligibility requests for prospective Subjects and controls; intervention regimen(s), proposed methods of analysis of data; statistical considerations, and organization of the study. The protocol usually also provides the background and rationale for the trial, but these could be represented in other protocol referenced documents."@en ;
+    rdfs:comment "http://purl.obolibrary.org/obo/NCIT_C25320"@en ;
+    idr:entityType "Transactional" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyProgressMeasure a owl:Class ;
+    rdfs:label "Study Progress Measure"@en ;
+    skos:definition "A specific measure for a work item which may be baselined, planned or an achieved value e.g. the number of Patients to enrol at a Study Site or the actual number of screened Subjects for a Study. Measures can be at multiple levels including Study, Study Country and Study Site and can be periodic as well as specific."@en ;
+    rdfs:comment "ADRM: CLINICAL TRIAL RECRUITMENT GOAL"@en ;
+    idr:entityType "Transactional" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyEndpoint a owl:Class ;
+    rdfs:label "Study Endpoint"@en ;
+    skos:definition "The Endpoint(s) that the clinical trial is designed to evaluate. A primary or secondary outcome used to judge the effectiveness of a treatment. Common endpoints are severe toxicity, disease progression, or death."@en ;
+    rdfs:comment "ADRM: CLINICAL TRIAL ENDPOINT"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyProgressMeasureScenarioType a owl:Class ;
+    rdfs:label "Study Progress Measure Scenario Type"@en ;
+    skos:definition "This is a categorisation of measure types indicating the purpose or scenario of the measure. eg. ACT= Actual PLN = Planned BSL = Baseline OPL = Original Planned FCT = Forecast"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:ScheduleOfActivity a owl:Class ;
+    rdfs:label "Schedule Of Activity"@en ;
+    skos:definition "The Schedule of Activity holds the planned activities that will be executed for each Subject in the Clinical Study. It is a key part of the study protocol and is used across many Study functions and associated systems. Note this is also known as a schedule of assessments."@en ;
+    rdfs:comment "Note this is also known as a schedule of assessments. ADRM: Not Present"@en ;
+    idr:entityType "Transactional" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyBlindingType a owl:Class ;
+    rdfs:label "Study Blinding Type"@en ;
+    skos:definition "This is a procedure to limit bias by preventing subjects and/ or study personnel from identifying which treatments or procedures are administered, or from learning the results of tests and measures undertaken as part of a clinical investigation. Valid values are: Open Partial Blind Single Blind Double Blind"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:DoseForm a owl:Class ;
+    rdfs:label "Dose Form"@en ;
+    skos:definition "A physical manifestation of a Medicinal Product or Pharmaceutical Product that contains the active Ingredient(s) and/or inactive ingredient(s) that are intended to be delivered to the Patient Note that \"Pharmaceutical Dose Form\" can refer to the administered dose form or the manufactured dose form. The form in which active and/or inert Ingredient(s) are physically presented."@en ;
+    rdfs:comment "http://purl.obolibrary.org/obo/NCIT_C42636"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:Project a owl:Class ;
+    rdfs:label "Project"@en ;
+    skos:definition "Any specifically defined piece of work that is undertaken or attempted to meet a single requirement. [def-source: NCI]"@en ;
+    rdfs:comment "http://purl.obolibrary.org/obo/NCIT_C47885"@en ;
+    idr:entityType "Candidate Master" ;
+    idr:entityType "Primary" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyRandomizationType a owl:Class ;
+    rdfs:label "Study Randomization Type"@en ;
+    skos:definition "Randomisation is the process of assigning study subjects to treatment or control groups using an element of chance in order to reduce bias. Valid values include: Randomised Non-Randomised N/A"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:TherapeuticAreaMedical a owl:Class ;
+    rdfs:label "Therapeutic Area (Medical)"@en ;
+    skos:definition "A knowledge field that focuses on research and development of treatments for diseases and pathologic findings, as well as prevention of conditions that negatively impact the health of an individual. [def-source: NCI]"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyProgressMeasureType a owl:Class ;
+    rdfs:label "Study Progress Measure Type"@en ;
+    skos:definition "Specific progress measure types we want to capture. Each will belong to one Business Process. Note that some of these will not be required for some studies and contexts, as they will be derivable from subject-level data (events etc). However, for some studies (such as outsourced) we need to be able to capture the totals explicitly, as entered manually, rather than aggregated from lower level data. eg. Entered Followup Entered Screening Entered Treatment Entered Trial Completed Followup Completed Treatment Completed Trial Completed Visit Countries Set Up Dropped Followup Dropped Screening Dropped Treatment Dropped Treatment AE Dropped Treatment Completed Followup etc"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyDeliveryModel a owl:Class ;
+    rdfs:label "Study Delivery Model"@en ;
+    skos:definition "Represents how the study is managed, Internally or Externally, including different outsourcing models"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyProgressMeasureTypeFamily a owl:Class ;
+    rdfs:label "Study Progress Measure Type Family"@en ;
+    skos:definition "A high level business process for which we need to capture 'Progress totals'. eg. RCR = Recruitment SAC = Site Activation CYP = Country Participation etc"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:RouteOfAdministration a owl:Class ;
+    rdfs:label "Route Of Administration"@en ;
+    skos:definition "Designation of the part of the body through which or into which, or the way in which, the Medicinal Product is intended to be introduced. In some cases a medicinal product can be intended for more than one route and/or method of administration. The path by which the Pharmaceutical Product is taken into or makes contact with the body Examples include: Oral, intravenous, oromucosal, ocular"@en ;
+    rdfs:comment "http://purl.obolibrary.org/obo/NCIT_C38114"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyCharacteristicType a owl:Class ;
+    rdfs:label "Study Characteristic Type"@en ;
+    skos:definition "A set of study descriptors describing broad aims of the study e.g first time in man, food effect."@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:ProductFamily a owl:Class ;
+    rdfs:label "Product Family"@en ;
+    skos:definition "The Product Family is the basic grouping of Medicinal Products according to its active Ingredient(s), but irrespective of its physical characteristics."@en ;
+    idr:entityType "Candidate Master" ;
+    idr:entityType "Primary" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:ProductRole a owl:Class ;
+    rdfs:label "Product Role"@en ;
+    skos:definition "A defined role that a product may play in a study. Valid values include: investigational drug comparator other"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyObjective a owl:Class ;
+    rdfs:label "Study Objective"@en ;
+    skos:definition "The objectives to be achieved by the associated Protocol. Examples - Compare the quality of life during the 4 days after chemotherapy in patients treated with these antiemetic regimens. - Compare the chemotherapy-related nausea at course 3 of chemotherapy in these Patients after 2 courses of ginger vs. placebo."@en ;
+    rdfs:comment "ADRM: PROTOCOL OBJECTIVE"@en ;
+    idr:entityType "Transactional" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:Product a owl:Class ;
+    rdfs:label "Product"@en ;
+    skos:definition "A formal identification for a Product, which is divided into 4 main-subtypes: Product Family, Pharmaceutical Product, Investigational Medicinal Product and Medicinal Product. See also Material data entity for physical representations of a Product."@en ;
+    idr:entityType "Candidate Master" ;
+    idr:entityType "Primary" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyPhaseType a owl:Class ;
+    rdfs:label "Study Phase Type"@en ;
+    skos:definition "A single classification of the phase the study is within. Note that a study has one phase type only but that that phases may be concatenated to cover two contiguous phases. e.g. Phase IIa/IIb [AZ Data Values]: Phase I Phase Ia Phase Ib Phase I-IIa [ADRM examples] Ex: - Phase less - Phase I - Phase II - Phase III - Phase IV where: PHASE I Initial studies to determine the metabolism and pharmacologic actions of drugs in humans, the side effects associated with increasing doses, and to gain early evidence of effectiveness may include healthy participants and/or patients. In Phase I trials, researchers test an experimental substance or treatment in a small group of people (20-80) for the first time to evaluate its safety, determine a safe dosage range, and identify side effects. Phase I Phase I clinical trials are principally designed to examine the safety of a substance. Further trials and development cannot take place unless Phase I trials show the substance to be reasonably safe when administered to humans. (Some side effects may be acceptable in relation to the severity of the disease targeted.) Participants in this trial are closely scrutinized for the smallest indication of harm caused by the medicine. Because safety is as yet a question, these trials are necessarily small in scope. But they also give researchers an opportunity to begin to understand how the substance will work in humans. PHASE II Controlled clinical studies conducted to evaluate the effectiveness of the substance for a particular indication or indications in patients with the disease or condition under study and to determine the common short-term side effects and risks. In Phase II trials, the experimental study substance or treatment is given to a larger group of people (100-300) to see if it is effective and to further evaluate its safety. Phase II Phase II clinical trials are designed to further assess safety and evaluate efficacy in humans over the short term, and help set up parameters (e.g. dosage) of the longer-term Phase III trials. Phase II trials are typically placebo-controlled and double-blinded: neither the patient nor the medical personnel know whether the patient is receiving the substance or a placebo. These trials are larger in scope than Phase I and tend to take more time. In an effort to save time and money, some companies try to minimize the size and scope of Phase II trials. But, recognizing that a short cut can be the longest route, Genentech relies on information from preclinical and Phase I trials to design comprehensive Phase II trials that can clearly demonstrate the efficacy (or lack thereof) of a substance before a Phase III trial. This approach minimizes the risk of unpleasant surprises following the far more expensive Phase III trials. PHASE III Expanded controlled and uncontrolled trials after preliminary evidence suggesting effectiveness of the substance has been obtained, and are intended to gather additional information to evaluate the overall benefit-risk relationship of the substance and provide and adequate basis for physician labeling. In Phase III trials, the experimental study substance or treatment is given to large groups of people (1,000-3,000) to confirm its effectiveness, monitor side effects, compare it to commonly used treatments, and collect information that will allow the experimental substance or treatment to be used safely. Phase III Phase III trials are designed to prove the efficacy and confirm the safety of the substance. They are usually double-blinded and placebo-controlled and can involve hundreds or even thousands of patients over many months or even years. Though the numbers of patients involved can be great, the risks are relatively minimal because of the earlier testing to establish safety. The large scope of these trials gives researchers opportunity to prove efficacy and overall safety of the medicine as well as to identify rare side effects of treatment, if any. Awaiting Regulatory Approval Once all phases of clinical testing have been completed, if the data warrants it, Genentech applies to the Food and Drug Administration for regulatory approval to market the medicine in the United States. If the FDA agrees that the data proves the safety and efficacy of the substance, approval may come in several months or years, with those medicines with the most urgent medical need typically approved more quickly. Genentech works closely with regulatory agencies at all stages of clinical development to help ensure it can provide needed data to obtain approval as quickly as possible. PHASE IV Post-marketing studies to delineate additional information including the drug's risks, benefits, and optimal use. In Phase IV trials, post marketing studies delineate additional information including the drug's risks, benefits, and optimal use."@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:InvestigationalMedicinalProduct a owl:Class ;
+    rdfs:label "Investigational Medicinal Product"@en ;
+    rdfs:subClassOf idr-SSOT_Conceptual_Data_Model:Product ;
+    skos:definition "Pharmaceutical form of an active Substance or placebo being tested or used as a reference within a clinical trial, including Products already with a marketing authorisation but used or assembled (formulated or packaged) in a way different from the authorised form, or when used for an unauthorised Indication, or when used to gain further information about the authorised form. - IMP definition as taken from Directive 2001/20/EC, Article 2 (d)"@en ;
+    rdfs:comment "https://ec.europa.eu/health/sites/health/files/files/eudralex/vol-1/dir_2001_20/dir_2001_20_en.pdf"@en ;
+    idr:entityType "Candidate Master" ;
+    idr:entityType "Primary" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:MedicalCondition a owl:Class ;
+    rdfs:label "Medical Condition"@en ;
+    skos:definition "A disease, illness or injury; any physiologic, mental or psychological condition or disorder. These can be used to define the Indication, contra indication or side effect for a Product or the indication for a Study."@en ;
+    rdfs:comment "ADRM: Medical Condition"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:OtherMedicalCondition a owl:Class ;
+    rdfs:label "Other Medical Condition"@en ;
+    rdfs:subClassOf idr-SSOT_Conceptual_Data_Model:MedicalCondition ;
+    skos:definition "A set of Medical Conditions that AZ are currently not researching or investing in as part of their R&D programme"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:Arm a owl:Class ;
+    rdfs:label "Arm"@en ;
+    skos:definition "The standard by which experimental observations are evaluated. In many clinical trials, one group of Patients will be given an experimental drug or treatment, while the control group is given either a standard treatment for the illness or a placebo."@en ;
+    rdfs:comment "Any of the treatment groups in a randomized trial.  Most randomized trials have two \"arms,\" but some have three \"arms,\" or even more Ex: This is a randomized, double-blind, placebo-controlled, multicenter study. Patients are stratified according to participating center. Patients are randomized to 1 of 4 treatment arms. Day 1 of each course is defined as the day of chemotherapy administration.  - Arm I: Patients receive oral placebo twice daily on days -3 to 3 of chemotherapy courses 2 and 3.  - Arm II: Patients receive oral low-dose ginger and oral placebo twice daily on days -3 to 3 of chemotherapy courses 2 and 3.  - Arm III: Patients receive oral intermediate-dose ginger and oral placebo twice daily on days -3 to 3 of chemotherapy courses 2 and 3.   - Arm IV: Patients receive oral high-dose ginger twice daily on days -3 to 3 of chemotherapy courses 2 and 3.  Patients in each arm also continue receiving their scheduled antiemetic regimen comprising a 5-hydroxytryptamine type-3 (5-HT3) receptor antagonist (ondansetron, granisetron, tropisetron, and dolasetron mesylate) and dexamethasone (DM) (or the equivalent dose of IV methylprednisolone (MePRDL)) on day 1 of courses 2 and 3.  Symptoms are assessed on day -3 to day 1 of courses 2 and 3 and on days 1-4 of courses 1-3. Quality of life is assessed on day 4 of courses 1-3.  Nausea and vomiting are assessed 4 times daily on days 1-4 of courses 1-3.  ADRM: CONTROL GROUP (ARM)"@en ;
+    idr:entityType "Transactional" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:Indication a owl:Class ;
+    rdfs:label "Indication"@en ;
+    rdfs:subClassOf idr-SSOT_Conceptual_Data_Model:MedicalCondition ;
+    skos:definition "A sign, signal, circumstance, or symptom which serves to indicate or point out the cause, pathology, treatment, or issue of an attack of disease; the basis for initiation of a treatment for a disease or of a diagnostic test (causal, or symptomatic, or disease-specific indication). [def-source: NCI]"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyIssueSeverity a owl:Class ;
+    rdfs:label "Study Issue Severity"@en ;
+    skos:definition "A set of valid severity classifications for an issue. Valid values include Critical Major Minor TBD"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:ClinicalStudyCohort a owl:Class ;
+    rdfs:label "Clinical Study Cohort"@en ;
+    skos:definition "A cohort is a group of Subjects who share a common characteristic in a certain period of time. Typically these subjects in an interventional Study, can be selected from multiple treatment Arms but as a cohort can be analysed as a single group as part of the study's statistical analysis."@en ;
+    rdfs:comment "ADRM: CLINICAL TRIAL TEST COHORT GROUP"@en ;
+    idr:entityType "Transactional" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyIssueCategory a owl:Class ;
+    rdfs:label "Study Issue Category"@en ;
+    skos:definition "A categorisation of issues e.g. Major Protocol Deviation"@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyIssue a owl:Class ;
+    rdfs:label "Study Issue"@en ;
+    skos:definition "An event that needs to be recorded and potentially addressed as part of the Site management and Study management process."@en ;
+    idr:entityType "Transactional" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:SiteMonitoringVisit a owl:Class ;
+    rdfs:label "Site Monitoring Visit"@en ;
+    skos:definition "A visit or a meeting between the Site Monitor and staff at a Study Site to check progress and carry out data quality activities."@en ;
+    idr:entityType "Transactional" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyIssueAction a owl:Class ;
+    rdfs:label "Study Issue Action"@en ;
+    skos:definition "Captures actions relating to resolving an Issue such as Preventive or Corrective actions"@en ;
+    idr:entityType "Transactional" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:SiteManagementReport a owl:Class ;
+    rdfs:label "Site Management Report"@en ;
+    skos:definition "The documented outcome of one or more site monitoring visits covering a specific period at a Site. The report contains a list of activities to be checked and may include a number of followup activities. Some reports may also include a summary of tracking information such as Milestones and targets met to date as well as issues raised for the monitor's attention."@en ;
+    idr:entityType "Transactional" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:StudyIssueActionType a owl:Class ;
+    rdfs:label "Study Issue Action Type"@en ;
+    skos:definition "Issue Action types such as Preventive and Corrective."@en ;
+    idr:entityType "Reference" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:SubjectVisit a owl:Class ;
+    rdfs:label "Subject Visit"@en ;
+    skos:definition "A visit by a Patient or Study participant to a medical professional. [def-source: NCI]"@en ;
+    idr:entityType "Transactional" ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:recording a owl:ObjectProperty ;
+    rdfs:label "recording"@en ;
+    rdfs:domain idr-SSOT_Conceptual_Data_Model:ClinicalStudy ;
+    rdfs:range idr-SSOT_Conceptual_Data_Model:StudyIssue ;
+    .
+
+idr-SSOT_Conceptual_Data_Model:theSubjectOf a owl:ObjectProperty ;
+    rdfs:label "the subject of"@en ;
+    rdfs:domain idr-SSOT_Conceptual_Data_Model:StudySite ;
+    rdfs:range idr-SSOT_Conceptual_Data_Model:StudyIssue ;
+    .
+
